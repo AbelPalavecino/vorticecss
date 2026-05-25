@@ -1,0 +1,164 @@
+/* ================================================
+   VORTICE CSS — Base
+   v1.0
+   ================================================
+   Estilos base del documento usando tokens semánticos.
+   Requiere tokens.css cargado antes.
+
+   Este archivo opina sobre tipografía y color base,
+   pero no sobre componentes ni layouts.
+   ================================================ */
+
+/* Documento */
+html {
+  font-family:      var(--font-body);
+  font-size:        var(--size-body);
+  color:            var(--color-text);
+  background-color: var(--color-bg);
+  line-height:      var(--leading-normal);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family:  var(--font-display);
+  font-weight:  var(--weight-bold);
+  line-height:  var(--leading-tight);
+  color:        var(--color-text);
+}
+
+h1 { font-size: var(--size-h1); }
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+h4 { font-size: var(--size-h4); }
+h5 { font-size: var(--size-body); font-weight: var(--weight-bold); }
+h6 { font-size: var(--size-small); font-weight: var(--weight-bold); }
+
+/* Párrafo */
+p {
+  font-size:   var(--size-body);
+  line-height: var(--leading-normal);
+  color:       var(--color-text);
+}
+
+/* Links */
+a {
+  color:      var(--color-cta-bg);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-cta-hover);
+}
+
+/* Texto pequeño */
+small {
+  font-size: var(--size-small);
+  color:     var(--color-text-muted);
+}
+
+/* Strong / Em */
+strong { font-weight: var(--weight-bold); }
+em     { font-style: italic; }
+
+/* Listas */
+ul, ol {
+  padding-left: var(--space-md);
+}
+
+ul { list-style: disc; }
+ol { list-style: decimal; }
+
+li {
+  line-height: var(--leading-normal);
+}
+
+li + li {
+  margin-top: var(--space-xs);
+}
+
+/* Código */
+code, pre {
+  font-family: var(--font-mono);
+  font-size:   var(--size-small);
+}
+
+code {
+  background-color: var(--color-bg-subtle);
+  border:           1px solid var(--color-border);
+  border-radius:    var(--radius-sm);
+  padding:          0.1em 0.4em;
+}
+
+pre {
+  background-color: var(--color-bg-subtle);
+  border:           1px solid var(--color-border);
+  border-radius:    var(--radius-md);
+  padding:          var(--space-md);
+  overflow-x:       auto;
+}
+
+pre code {
+  background: none;
+  border:     none;
+  padding:    0;
+}
+
+/* Blockquote */
+blockquote {
+  border-left:  3px solid var(--color-border-strong);
+  padding-left: var(--space-md);
+  color:        var(--color-text-muted);
+  font-style:   italic;
+}
+
+/* HR */
+hr {
+  border-color: var(--color-border);
+  margin-block: var(--space-lg);
+}
+
+/* Inputs base */
+input,
+textarea,
+select {
+  background-color: var(--color-bg);
+  border:           1px solid var(--color-border);
+  border-radius:    var(--radius-md);
+  padding:          var(--space-xs) var(--space-sm);
+  color:            var(--color-text);
+  transition:       border-color var(--transition-fast);
+  width:            100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline:      none;
+  border-color: var(--color-border-strong);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Tabla */
+table {
+  width:     100%;
+  font-size: var(--size-body);
+}
+
+th, td {
+  padding:      var(--space-xs) var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  text-align:   left;
+}
+
+th {
+  font-weight: var(--weight-bold);
+  color:       var(--color-text);
+}
+
+td {
+  color: var(--color-text);
+}
