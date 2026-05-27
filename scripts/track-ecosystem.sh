@@ -3,7 +3,7 @@
 # Propósito: rastrear novedades de Tailwind, MDN y web.dev
 #            y volcarlas a docs/ecosystem-radar.md
 
-REPO="/Users/abelo/Documents/Webs/vorticecss"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 RADAR="$REPO/docs/ecosystem-radar.md"
 DATE=$(date +%Y-%m-%d)
 

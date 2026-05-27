@@ -3,8 +3,9 @@
 # Propósito: inyectar solo los 3 gaps de mayor prioridad al iniciar sesión
 #            (versión conservadora — evita inyectar el reporte completo)
 
-REPORT="/Users/abelo/Documents/Webs/vorticecss/docs/gap-report.md"
-RADAR="/Users/abelo/Documents/Webs/vorticecss/docs/ecosystem-radar.md"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+REPORT="$REPO/docs/gap-report.md"
+RADAR="$REPO/docs/ecosystem-radar.md"
 
 if [ ! -f "$REPORT" ] || [ ! -s "$REPORT" ]; then
   exit 0

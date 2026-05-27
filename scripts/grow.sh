@@ -6,7 +6,7 @@
 #   scripts/grow.sh --branch     → crea rama grow/YYYY-MM-DD y actualiza el gap report
 #   scripts/grow.sh --help       → muestra esta ayuda
 
-REPO="/Users/abelo/Documents/Webs/vorticecss"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 DATE=$(date +%Y-%m-%d)
 BRANCH="grow/$DATE"
 

@@ -2,7 +2,7 @@
 # Analiza el estado del framework y produce docs/gap-report.md
 # Compara cobertura actual vs target de utilidades, tokens y responsive
 
-REPO="/Users/abelo/Documents/Webs/vorticecss"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 REPORT="$REPO/docs/gap-report.md"
 UTILS="$REPO/utils.css"
 GRID="$REPO/grid.css"
