@@ -2,7 +2,7 @@
 # Disparado por: Stop (fin de turno de Claude)
 # Propósito: sugerir la próxima feature de mayor impacto si hay cambios CSS pendientes
 
-REPO="/Users/abelo/Documents/Webs/vorticecss"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 
 # Solo disparar si hay archivos CSS modificados sin commitear en esta sesión
 CHANGED_CSS=$(git -C "$REPO" diff --name-only HEAD 2>/dev/null | grep '\.css$' | wc -l | tr -d ' ')

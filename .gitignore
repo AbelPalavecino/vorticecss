@@ -1,0 +1,9 @@
+# Claude Code — config local de máquina, no portátil
+.claude/settings.json
+.claude/settings.local.json
+
+# Documentación con información personal del maintainer
+docs/brief.md
+
+# Logs de automatizaciones
+/tmp/vorticecss-*.log

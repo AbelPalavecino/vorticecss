@@ -2,7 +2,7 @@
 # Disparado por: Stop
 # Propósito: commitear cambios en rama agent/feature al finalizar sesión y volver a main
 
-REPO="/Users/abelo/Documents/Webs/vorticecss"
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
 DATE=$(date +%Y-%m-%d)
 
 # Sin cambios → no hacer nada
