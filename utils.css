@@ -22,7 +22,14 @@
    13. Border radius
    14. Sombra
    15. Cursor
-   16. Responsive (md · lg)
+   16. Aspect Ratio
+   17. Opacity
+   18. Line Clamp
+   19. Background Color
+   20. Object Fit
+   21. Border Width
+   22. Outline / Focus Ring
+   23. Responsive (md · lg)
    ================================================ */
 
 
@@ -267,7 +274,82 @@
 
 
 /* ------------------------------------------------
-   16. RESPONSIVE
+   16. ASPECT RATIO
+   ------------------------------------------------ */
+
+.aspect-auto   { aspect-ratio: auto; }
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video  { aspect-ratio: 16 / 9; }
+.aspect-4-3    { aspect-ratio: 4 / 3; }
+
+
+/* ------------------------------------------------
+   17. OPACITY
+   ------------------------------------------------ */
+
+.opacity-0   { opacity: 0; }
+.opacity-25  { opacity: 0.25; }
+.opacity-50  { opacity: 0.5; }
+.opacity-75  { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
+
+
+/* ------------------------------------------------
+   18. LINE CLAMP
+   ------------------------------------------------ */
+
+.line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.line-clamp-3 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+
+
+/* ------------------------------------------------
+   19. BACKGROUND COLOR
+   Consume tokens semánticos de superficie.
+   ------------------------------------------------ */
+
+.bg-default { background-color: var(--color-bg); }
+.bg-subtle  { background-color: var(--color-bg-subtle); }
+.bg-raised  { background-color: var(--color-bg-raised); }
+.bg-cta     { background-color: var(--color-cta-bg); }
+
+
+/* ------------------------------------------------
+   20. OBJECT FIT
+   ------------------------------------------------ */
+
+.object-contain    { object-fit: contain; }
+.object-cover      { object-fit: cover; }
+.object-fill       { object-fit: fill; }
+.object-none       { object-fit: none; }
+.object-scale-down { object-fit: scale-down; }
+
+
+/* ------------------------------------------------
+   21. BORDER WIDTH
+   Consume --color-border de tokens.
+   ------------------------------------------------ */
+
+.border-0 { border-width: 0; }
+.border   { border: 1px solid var(--color-border); }
+.border-2 { border: 2px solid var(--color-border); }
+.border-t { border-top: 1px solid var(--color-border); }
+.border-r { border-right: 1px solid var(--color-border); }
+.border-b { border-bottom: 1px solid var(--color-border); }
+.border-l { border-left: 1px solid var(--color-border); }
+
+
+/* ------------------------------------------------
+   22. OUTLINE / FOCUS RING
+   ------------------------------------------------ */
+
+.outline-none  { outline: none; }
+.ring          { outline: 2px solid var(--color-cta-bg); outline-offset: 2px; }
+.ring-offset-2 { outline-offset: 2px; }
+
+
+/* ------------------------------------------------
+   23. RESPONSIVE
    Solo las utilidades que tienen sentido
    cambiar por breakpoint.
    ------------------------------------------------ */

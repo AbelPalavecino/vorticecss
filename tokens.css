@@ -31,6 +31,7 @@
      2g. Forma
      2h. Sombra
      2i. Movimiento
+     2j. Estado
    Sección 3 · Breakpoints (referencia — no son custom properties)
    ================================================ */
 
@@ -167,6 +168,14 @@
   --transition-fast:     150ms ease;
   --transition-normal:   250ms ease;
   --transition-slow:     400ms ease;
+
+  /* 2j. Estado */
+  --color-success:       #16a34a;
+  --color-success-bg:    #f0fdf4;
+  --color-error:         #dc2626;
+  --color-error-bg:      #fef2f2;
+  --color-warning:       #d97706;
+  --color-warning-bg:    #fffbeb;
 }
 
 
