@@ -1,0 +1,58 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/abelo/Documents/Webs/vorticecss/scripts/hook-session-start.sh",
+            "statusMessage": "Cargando estado del framework..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/abelo/Documents/Webs/vorticecss/scripts/hook-lint.sh",
+            "statusMessage": "[1/5] Lint — validando convenciones CSS..."
+          },
+          {
+            "type": "command",
+            "command": "/Users/abelo/Documents/Webs/vorticecss/scripts/hook-tokens.sh",
+            "statusMessage": "[2/5] Tokens — verificando integridad del sistema..."
+          },
+          {
+            "type": "command",
+            "command": "/Users/abelo/Documents/Webs/vorticecss/scripts/hook-changelog.sh",
+            "statusMessage": "[3/4] Changelog — verificando documentación..."
+          },
+          {
+            "type": "command",
+            "command": "/Users/abelo/Documents/Webs/vorticecss/scripts/hook-brief.sh",
+            "statusMessage": "[4/4] Brief — verificando decisiones arquitecturales..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/abelo/Documents/Webs/vorticecss/scripts/hook-growth.sh",
+            "statusMessage": "Analizando estado del framework..."
+          },
+          {
+            "type": "command",
+            "command": "/Users/abelo/Documents/Webs/vorticecss/scripts/hook-commit.sh",
+            "statusMessage": "Commiteando cambios en rama agent/..."
+          }
+        ]
+      }
+    ]
+  }
+}
